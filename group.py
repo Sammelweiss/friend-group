@@ -25,7 +25,18 @@ my_group = {"Jill": {
                     },
             "Zalika": {
                 "Age": 28,
-                "Profession": "artist"},
+                "Profession": "artist"
+                "Relationship": 
+                    [{
+                        "Name": "Jill",
+                        "Type": "friend"
+                        }
+                    #inferred frmo Nash
+                    {
+                        "Name": "Nash",
+                        "Type": "tenant"
+                        }]
+                     },
             "John": {
                 "Age": 27, 
                 "Profession": "writer"},
