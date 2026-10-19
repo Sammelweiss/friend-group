@@ -16,13 +16,19 @@ friendgroup
 
 my_group = {"Jill": {
                 "Age": 26,
-                "Profession": "biologist"},
+                "Profession": "biologist",
+                "Relationship": 
+                    {
+                        "Name": "Zalika",
+                        "Type": "friend"
+                    }
+                    },
             "Zalika": {
                 "Age": 28,
                 "Profession": "artist"},
             "John": {
                 "Age": 27, 
-                "Profession": "writer"}, # type: ignore
+                "Profession": "writer"},
             "Nash": {
                 "Age": 34,
-                "Profession": "chef"}} # type: ignore
+                "Profession": "chef"}}
