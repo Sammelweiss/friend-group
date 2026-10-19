@@ -19,4 +19,10 @@ my_group = {"Jill": {
                 "Profession": "biologist"},
             "Zalika": {
                 "Age": 28,
-                "Profession": "artist"}}
+                "Profession": "artist"},
+            "John": {
+                "Age": 27, 
+                "Profession": "writer"}, # type: ignore
+            "Nash": {
+                "Age": 34,
+                "Profession": "chef"}} # type: ignore
