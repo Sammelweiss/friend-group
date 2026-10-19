@@ -70,7 +70,8 @@ my_group = {"Jill": {
 }           
 
 
-
+# this was a test, does not work properly
+"""
 def add_person() :
     my_group.update({"Jill": {
                 "Age": 26,
@@ -87,7 +88,7 @@ def add_person() :
                     }
                 }
     )
-
+"""
 
 # define a function to add a person, with some default values
 def add_person(name="New person", age=20, profession="default", relationship=[]) :
