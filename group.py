@@ -101,7 +101,9 @@ def add_person(name="New person", age=20, profession="default", relationship=[])
 
 #testing adding a person
 add_person()
+#need to create a list of relations for the new person
 relation_list =[{"Name": "John","Type": "teacher"}]
-
 add_person("Diego", 35, "researcher", relation_list)
+
+
 
