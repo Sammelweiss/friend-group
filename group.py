@@ -71,7 +71,7 @@ my_group = {"Jill": {
 
 
 
-def add_person :
+def add_person() :
     my_group.update({"Jill": {
                 "Age": 26,
                 "Profession": "biologist",
@@ -87,3 +87,21 @@ def add_person :
                     }
                 }
     )
+
+
+# define a function to add a person, with some default values
+def add_person(name="New person", age=20, profession="default", relationship=[]) :
+    my_group.update({name: {
+                "Age": age,
+                "Profession": profession,
+                "Relationship": relationship
+                        }
+                }
+    )
+
+#testing adding a person
+add_person()
+relation_list =[{"Name": "John","Type": "teacher"}]
+
+add_person("Diego", 35, "researcher", relation_list)
+
