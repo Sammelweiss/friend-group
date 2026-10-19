@@ -18,10 +18,14 @@ my_group = {"Jill": {
                 "Age": 26,
                 "Profession": "biologist",
                 "Relationship": 
-                    {
+                    [{
                         "Name": "Zalika",
                         "Type": "friend"
-                    }
+                    },
+                    {
+                        "Name": "John",
+                        "Type": "partner"
+                    }]
                     },
             "Zalika": {
                 "Age": 28,
@@ -42,4 +46,15 @@ my_group = {"Jill": {
                 "Profession": "writer"},
             "Nash": {
                 "Age": 34,
-                "Profession": "chef"}}
+                "Profession": "chef",
+                "Relationship": 
+                    [{
+                        "Name": "John",
+                        "Type": "cousin"
+                    },
+                    {
+                        "Name": "Zalika",
+                        "Type": "landlord"
+                    }]
+                    }
+                }
