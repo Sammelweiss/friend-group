@@ -43,16 +43,16 @@ my_group = {"Jill": {
                      },
             "John": {
                 "Age": 27, 
-                "Profession": "writer"},
+                "Profession": "writer",
                 "Relationship": 
-                    {
+                    [{
                         "Name": "Jill",
                         "Type": "partner"
-                    }
+                    },
                     {
                         "Name": "Nash",
                         "Type": "cousin" #inferred
-                    }
+                    }]
                     },
             "Nash": {
                 "Age": 34,
@@ -67,4 +67,4 @@ my_group = {"Jill": {
                         "Type": "landlord"
                     }]
                     }
-                }
+}           
