@@ -2,4 +2,16 @@
 
 # Your code to go here...
 
+"""
+friendgroup
+- friend
+   - age
+   - profession
+   - relationship(dict)
+       - otherfriendname
+           - relationship
+           - connection
+
+"""
+
 my_group =
