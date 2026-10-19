@@ -34,12 +34,12 @@ my_group = {"Jill": {
                     [{
                         "Name": "Jill",
                         "Type": "friend"
-                        }
+                    },
                     #inferred frmo Nash
                     {
                         "Name": "Nash",
                         "Type": "tenant"
-                        }]
+                    }]
                      },
             "John": {
                 "Age": 27, 
