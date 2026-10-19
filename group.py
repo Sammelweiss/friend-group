@@ -29,7 +29,7 @@ my_group = {"Jill": {
                     },
             "Zalika": {
                 "Age": 28,
-                "Profession": "artist"
+                "Profession": "artist",
                 "Relationship": 
                     [{
                         "Name": "Jill",
