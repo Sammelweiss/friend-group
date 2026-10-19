@@ -68,3 +68,22 @@ my_group = {"Jill": {
                     }]
                     }
 }           
+
+
+
+def add_person :
+    my_group.update({"Jill": {
+                "Age": 26,
+                "Profession": "biologist",
+                "Relationship": 
+                    [{
+                        "Name": "Zalika",
+                        "Type": "friend"
+                    },
+                    {
+                        "Name": "John",
+                        "Type": "partner"
+                    }]
+                    }
+                }
+    )
