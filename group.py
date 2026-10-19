@@ -14,4 +14,9 @@ friendgroup
 
 """
 
-my_group =
+my_group = {"Jill": {
+                "Age": 26,
+                "Profession": "biologist"},
+            "Zalika": {
+                "Age": 28,
+                "Profession": "artist"}}
