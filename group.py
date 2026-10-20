@@ -106,5 +106,7 @@ add_person()
 relation_list =[{"Name": "John","Type": "teacher"}]
 add_person("Diego", 35, "researcher", relation_list)
 
+#trying to add with the relationship inside
+add_person("Katie", 36, "postdoc", [{"Name": "Yana","Type": "friend"}])
 
 
