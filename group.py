@@ -215,3 +215,18 @@ print(max([my_group[person]["Age"]
            for relation in my_group[person]["Relationship"]
            if relation['Type'] == "friend"]))
 
+
+
+
+
+# writing a json file
+import json
+
+# writing to file
+with open('friend-group.json', 'w') as filename:
+    json.dump(my_group, filename, indent=4, sort_keys=True)
+# loading from file
+with open('friend-group.json', 'r') as file:
+     loaded_friend_group = json.load(file)
+print(loaded_friend_group)
+
