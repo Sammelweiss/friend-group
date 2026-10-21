@@ -1,16 +1,16 @@
 """An example of how to represent a group of acquaintances in Python."""
 
-# Your code to go here...
+# data structure
 
 """
-friendgroup
-- friend
+friendgroup {dict}
+- friend {dict}
    - age
    - profession
-   - relationship(dict)
-       - otherfriendname
-           - relationship
-           - connection
+   - relationship [list]
+        - {dict}
+            - relationship name
+            - connection
 
 """
 
@@ -35,7 +35,7 @@ my_group = {"Jill": {
                         "Name": "Jill",
                         "Type": "friend"
                     },
-                    #inferred frmo Nash
+                    #inferred from Nash
                     {
                         "Name": "Nash",
                         "Type": "tenant"
@@ -70,25 +70,6 @@ my_group = {"Jill": {
 }           
 
 
-# this was a test, does not work properly
-"""
-def add_person() :
-    my_group.update({"Jill": {
-                "Age": 26,
-                "Profession": "biologist",
-                "Relationship": 
-                    [{
-                        "Name": "Zalika",
-                        "Type": "friend"
-                    },
-                    {
-                        "Name": "John",
-                        "Type": "partner"
-                    }]
-                    }
-                }
-    )
-"""
 
 # define a function to add a person, with some default values
 def add_person(name="New person", age=20, profession="default", relationship=[]) :
@@ -120,6 +101,27 @@ comprehension expressions to your group.py file so that it prints out the follow
  3   the maximum age of people in the group that have at least one relation
  4   [more advanced] the maximum age of people in the group that have at least one friend
 """
+##############
+# summary
+##############
+# task 1 -  the maximum age of people in the group
+print(max([my_group[person]["Age"] for person in my_group]))
+
+# task  2   the average (mean) number of relations among members of the group
+# need a mean average command
+from numpy import mean
+print(mean(len(my_group[person]["Relationship"])))
+
+# task  3 the maximum age of people in the group that have at least one relation
+print(max([my_group[person]["Age"] for person in my_group if len(my_group[person]["Relationship"]) > 0]))
+# note, all at two relationships so couldn't really test this
+
+# task 4  [more advanced] the maximum age of people in the group that have at least one friend
+print(max([my_group[person]["Age"] 
+           for person in my_group 
+           for relation in my_group[person]["Relationship"]
+           if relation['Type'] == "friend"]))
+
 
 ########
 # task 1 -  the maximum age of people in the group
@@ -188,16 +190,28 @@ print(max([my_group[person]["Age"] for person in my_group if len(my_group[person
 
 
 ####################
-# task  3 the maximum age of people in the group 
-# that have at least one relation
-####################
+# task 4  [more advanced] the maximum age of 
+# people in the group that have at least one friend
+###################
+age_list = []
 print(age_list)
+people_with_friends = []
 for person in my_group:
 #    print (person)
 #    print (my_group[person])
-    print (my_group[person]["Relationship"])
-    print (len(my_group[person]["Relationship"]))
-    #check friend number
-    if len(my_group[person]["Relationship"]) > 1:
-       age_list.append (my_group[person]["Age"])
+#    print (my_group[person]["Relationship"])
+#    print (my_group[person]["Relationship"][0])
+    for relation in my_group[person]["Relationship"]:
+#        print(relation['Type'])
+        if relation['Type'] == "friend":
+            print(person, "aged", my_group[person]["Age"], "has a friend")
+            age_list.append (my_group[person]["Age"])
     print(age_list)
+
+print(max(age_list))
+# as comprehension
+print(max([my_group[person]["Age"] 
+           for person in my_group 
+           for relation in my_group[person]["Relationship"]
+           if relation['Type'] == "friend"]))
+
