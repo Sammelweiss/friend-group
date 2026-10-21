@@ -115,12 +115,15 @@ add_person("Katie", 36, "postdoc", [{"Name": "Yana","Type": "friend"}])
 """
 Task requirement
 comprehension expressions to your group.py file so that it prints out the following when the script is run:
-    the maximum age of people in the group
-    the average (mean) number of relations among members of the group
-    the maximum age of people in the group that have at least one relation
-    [more advanced] the maximum age of people in the group that have at least one friend
+ 1   the maximum age of people in the group
+ 2   the average (mean) number of relations among members of the group
+ 3   the maximum age of people in the group that have at least one relation
+ 4   [more advanced] the maximum age of people in the group that have at least one friend
 """
 
+########
+# task 1 -  the maximum age of people in the group
+######### 
 # testing extracting info
 # Person
 my_group["Jill"]
@@ -128,10 +131,73 @@ my_group["Jill"]
 my_group["Jill"]["Age"]
 # code, extracting with for loop
 age_list = [] # create list of ages
+print(age_list)        
 for person in my_group:
     print (person)
     print (my_group[person])
     print (my_group[person]["Age"])
     age_list.append (my_group[person]["Age"])
-#    print (age)
-        
+print(age_list)
+print(max(age_list))
+max(age_list)
+#age_list2 = []
+#age_list2 = [my_group[person]["Age"] for person in my_group]
+
+#as comprehension
+#age_list2.append(my_group[person]["Age"] for person in my_group) 
+#age_list2.append(age for person in my_group: age = my_group[person]["Age"]) 
+print(max([my_group[person]["Age"] for person in my_group]))
+
+########
+# task  2   the average (mean) number of relations among members of the group
+######### 
+# code, extracting with for loop
+for person in my_group:
+#    print (person)
+#    print (my_group[person])
+    print (my_group[person]["Relationship"])
+    print (len(my_group[person]["Relationship"]))
+
+# as comprehension
+# need a mean average command
+from numpy import mean
+print(mean(len(my_group[person]["Relationship"])))
+
+
+####################
+# task  3 the maximum age of people in the group 
+# that have at least one relation
+#################### 
+# code, extracting with for loop
+print(age_list)
+for person in my_group:
+#    print (person)
+#    print (my_group[person])
+    print (my_group[person]["Relationship"])
+    print (len(my_group[person]["Relationship"]))
+    #check friend number
+    if len(my_group[person]["Relationship"]) > 1:
+       age_list.append (my_group[person]["Age"])
+    print(age_list)
+
+# as comprehension
+# check full list
+# [my_group[person]["Age"] for person in my_group if len(my_group[person]["Relationship"]) > 0]
+print(max([my_group[person]["Age"] for person in my_group if len(my_group[person]["Relationship"]) > 0]))
+#print(max([my_group[person]["Age"] for person in my_group if len(my_group[person]["Relationship"]) > 1]))
+
+
+####################
+# task  3 the maximum age of people in the group 
+# that have at least one relation
+####################
+print(age_list)
+for person in my_group:
+#    print (person)
+#    print (my_group[person])
+    print (my_group[person]["Relationship"])
+    print (len(my_group[person]["Relationship"]))
+    #check friend number
+    if len(my_group[person]["Relationship"]) > 1:
+       age_list.append (my_group[person]["Age"])
+    print(age_list)
