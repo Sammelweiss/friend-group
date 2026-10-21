@@ -110,3 +110,28 @@ add_person("Diego", 35, "researcher", relation_list)
 add_person("Katie", 36, "postdoc", [{"Name": "Yana","Type": "friend"}])
 
 
+#
+# new section on comprehensions
+"""
+Task requirement
+comprehension expressions to your group.py file so that it prints out the following when the script is run:
+    the maximum age of people in the group
+    the average (mean) number of relations among members of the group
+    the maximum age of people in the group that have at least one relation
+    [more advanced] the maximum age of people in the group that have at least one friend
+"""
+
+# testing extracting info
+# Person
+my_group["Jill"]
+# age
+my_group["Jill"]["Age"]
+# code, extracting with for loop
+age_list = [] # create list of ages
+for person in my_group:
+    print (person)
+    print (my_group[person])
+    print (my_group[person]["Age"])
+    age_list.append (my_group[person]["Age"])
+#    print (age)
+        
